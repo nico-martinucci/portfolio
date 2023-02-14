@@ -49,7 +49,7 @@ const projectList = [
     {
         name: "Warbler",
         description: 'Just like Twitter, but with somehow more suspcious accounts...',
-        image: "",
+        image: "/warbler_thumb.jpg",
         tech: ["Vanilla JS", "Axios", "Flask", "SQLAlchemy", "WTForms", "bcrypt"],
         deployLink: "https://warbler-nm.onrender.com/",
         gitHubLinks: [
@@ -72,6 +72,19 @@ const projectList = [
             }
         ]
     },
+    // {
+    //     name: "this",
+    //     description: "My (very WIP) website",
+    //     image: "/portfolio_thumb.jpg",
+    //     tech: ["React", "Material UI"],
+    //     deployLink: "/",
+    //     gitHubLinks: [
+    //         {
+    //             title: "GitHub",
+    //             link: "https://github.com/nico-martinucci/rebbit"
+    //         }
+    //     ]
+    // },
 ]
 
 

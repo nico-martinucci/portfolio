@@ -17,7 +17,7 @@ function Nav() {
     const linkStyle = { textDecoration: "none", color: "inherit" };
 
     return (
-        <Box sx={{ flexGrow: 1 }}>
+        <Box mb={5} sx={{ flexGrow: 1 }}>
             <AppBar position="static">
                 <Toolbar>
                     <IconButton

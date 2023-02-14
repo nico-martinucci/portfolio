@@ -2,6 +2,8 @@ import { Typography } from "@mui/material";
 import IndividualProject from "./IndividualProject";
 import Grid2 from '@mui/material/Unstable_Grid2'
 import projectList from "./projectList";
+import { useEffect, useState } from "react";
+import FadeInOut from "./fadeInOut";
 
 /**
  * Projects: 
