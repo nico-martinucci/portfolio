@@ -1,4 +1,4 @@
-import { CssBaseline, Typography, Container } from '@mui/material';
+import { CssBaseline, Container } from '@mui/material';
 import { BrowserRouter } from 'react-router-dom';
 import './App.css';
 import Footer from './Footer';
@@ -18,7 +18,7 @@ function App() {
 			<Container>
 				<CssBaseline />
 				<BrowserRouter>
-					<Nav></Nav>
+					<Nav />
 					<RoutesList />
 				</BrowserRouter>
 				<Footer />
