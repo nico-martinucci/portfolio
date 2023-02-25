@@ -1,28 +1,30 @@
 import { Stack, Typography, Button, ButtonGroup } from "@mui/material";
-import { Container } from "@mui/system";
-import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import FadeInOut from "./fadeInOut";
-import Matter from "matter-js";
+import Matter, { MouseConstraint } from "matter-js";
 
 // module aliases
 var Engine = Matter.Engine,
     Render = Matter.Render,
     Runner = Matter.Runner,
     Bodies = Matter.Bodies,
-    Composite = Matter.Composite;
+    Composite = Matter.Composite,
+    Mouse = Matter.Mouse;
 
 // canvas.width = window.innerWidth;
 // canvas.height = window.innerHeight;
 
 // create an engine
 var engine = Engine.create();
+var matterCanvas = document.getElementById("matterCanvas");
+// var canvasMouse = Mouse.create(matterCanvas);
+// canvasMouse.pixelRatio = 2;
+let mConstraint = MouseConstraint.create(engine);
 
 // create a renderer
 var render = Render.create({
     element: document.body,
     engine: engine,
-    canvas: document.getElementById("matterCanvas"),
+    canvas: matterCanvas,
     options: {
         width: window.innerWidth,
         height: window.innerHeight,
@@ -30,6 +32,10 @@ var render = Render.create({
         background: 'transparent' // remove once it's drawing in correct location
     }
 });
+
+console.log(engine.world);
+
+Composite.add(engine.world, mConstraint);
 
 // create a ground
 // x (center), y (center), w, h
@@ -97,7 +103,7 @@ function Home() {
         let y = Math.random() * 200;
         let r = (Math.random() * 60) + 20;
         const newBody = Bodies.circle(x, y, r, r);
-        console.log(newBody);
+        console.log("new body");
         Composite.add(engine.world, [newBody]);
     }
 
