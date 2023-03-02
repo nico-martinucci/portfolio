@@ -1,5 +1,7 @@
 import { Typography, Stack } from "@mui/material";
 import FilePresentIcon from '@mui/icons-material/FilePresent';
+import { motion } from "framer-motion"
+
 
 /**
  * Resume: 
@@ -9,7 +11,7 @@ function Resume() {
     const linkStyle = { textDecoration: "none", color: "inherit" };
 
     return (
-        <>
+        <motion.div initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}}>
             <Typography variant="h2" gutterBottom>
                 Resume
             </Typography>
@@ -23,7 +25,7 @@ function Resume() {
                     </Typography>
                 </Stack>
             </Stack>
-        </>
+        </motion.div>
     )
 }
 

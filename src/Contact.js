@@ -1,6 +1,8 @@
 import { Typography } from "@mui/material";
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import { Stack } from "@mui/system";
+import { motion } from "framer-motion"
+
 
 /**
  * Contact: 
@@ -10,8 +12,7 @@ function Contact() {
     const linkStyle = { textDecoration: "none", color: "inherit" };
 
     return (
-        <>
-
+        <motion.div initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}}>
             <Typography variant="h2" gutterBottom>
                 Get in touch
             </Typography>
@@ -25,7 +26,7 @@ function Contact() {
                     </Typography>
                 </Stack>
             </Stack>
-        </>
+        </motion.div>
     )
 }
 

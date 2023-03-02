@@ -1,6 +1,7 @@
 import { Stack, Typography, Button, ButtonGroup } from "@mui/material";
 import { Link } from "react-router-dom";
 import Matter, { MouseConstraint } from "matter-js";
+import { motion } from "framer-motion"
 
 // module aliases
 var Engine = Matter.Engine,
@@ -40,11 +41,11 @@ Composite.add(engine.world, mConstraint);
 // create a ground
 // x (center), y (center), w, h
 const ground = Bodies.rectangle(
-    window.innerWidth / 2, 
-    window.innerHeight + 10, 
-    window.innerWidth, 
-    20, 
-    { 
+    window.innerWidth / 2,
+    window.innerHeight + 10,
+    window.innerWidth,
+    20,
+    {
         isStatic: true
     }
 );
@@ -52,11 +53,11 @@ const ground = Bodies.rectangle(
 // create a left wall
 // x (center), y (center), w, h
 const leftWall = Bodies.rectangle(
-    -5, 
-    window.innerHeight / 2, 
-    10, 
-    window.innerHeight, 
-    { 
+    -5,
+    window.innerHeight / 2,
+    10,
+    window.innerHeight,
+    {
         isStatic: true
     }
 );
@@ -64,11 +65,11 @@ const leftWall = Bodies.rectangle(
 // create a right wall
 // x (center), y (center), w, h
 const rightWall = Bodies.rectangle(
-    window.innerWidth + 5, 
-    window.innerHeight / 2, 
-    10, 
-    window.innerHeight, 
-    { 
+    window.innerWidth + 5,
+    window.innerHeight / 2,
+    10,
+    window.innerHeight,
+    {
         isStatic: true
     }
 );
@@ -108,9 +109,9 @@ function Home() {
     }
 
     return (
-        <>
+        <motion.div initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}}>
             <Stack direction="row">
-                <img width="300px" src="/nico_headshot_circle.png" onClick={addBody}/>
+                <img width="300px" src="/nico_headshot_circle.png" onClick={addBody} />
                 <Stack ml={6}>
                     <Stack gap={3}>
                         <Typography variant="h3" gutterBottom>
@@ -143,7 +144,7 @@ function Home() {
                     </Stack>
                 </Stack>
             </Stack>
-        </>
+        </motion.div>
     )
 }
 

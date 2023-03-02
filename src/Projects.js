@@ -3,7 +3,7 @@ import IndividualProject from "./IndividualProject";
 import Grid2 from '@mui/material/Unstable_Grid2'
 import projectList from "./projectList";
 import { useEffect, useState } from "react";
-import FadeInOut from "./fadeInOut";
+import { motion } from "framer-motion"
 
 /**
  * Projects: 
@@ -11,7 +11,7 @@ import FadeInOut from "./fadeInOut";
 function Projects() {
 
     return (
-        <>
+        <motion.div initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}}>
             <Typography variant="h2" gutterBottom>
                 Projects
             </Typography >
@@ -23,7 +23,7 @@ function Projects() {
                     <IndividualProject key={p.name} project={p} />
                 ))}
             </Grid2>
-        </>
+        </motion.div>
     )
 }
 
