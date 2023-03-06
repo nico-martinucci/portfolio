@@ -93,12 +93,6 @@ function Skills() {
                                         SQL
                                     </Typography>
                                 </Grid>
-                                <Grid style={{ ...debugStyle, ...logoStyle }}>
-                                    <GraphQLLogo width={logoWidth} height={logoHeight} />
-                                    <Typography variant="p" gutterBottom>
-                                        GraphQL
-                                    </Typography>
-                                </Grid>
                             </Grid>
                         </Grid>
                         <Grid xs={2} style={debugStyle} display="flex" alignItems="center">
@@ -132,6 +126,12 @@ function Skills() {
                                         PostgreSQL
                                     </Typography>
                                 </Grid>
+                                <Grid style={{ ...debugStyle, ...logoStyle }}>
+                                    <GraphQLLogo width={logoWidth} height={logoHeight} />
+                                    <Typography variant="p" gutterBottom>
+                                        GraphQL
+                                    </Typography>
+                                </Grid>
                             </Grid>
                         </Grid>
                         <Grid xs={2} style={debugStyle} display="flex" alignItems="center">
@@ -163,18 +163,6 @@ function Skills() {
                                     <JestLogo width={logoWidth} height={logoHeight} />
                                     <Typography variant="p" gutterBottom>
                                         Jest
-                                    </Typography>
-                                </Grid>
-                                <Grid style={{ ...debugStyle, ...logoStyle }}>
-                                    <AWSS3Logo width={logoWidth} height={logoHeight} />
-                                    <Typography variant="p" gutterBottom>
-                                        AWS S3
-                                    </Typography>
-                                </Grid>
-                                <Grid style={{ ...debugStyle, ...logoStyle }}>
-                                    <VSCodeLogo width={logoWidth} height={logoHeight} />
-                                    <Typography variant="p" gutterBottom>
-                                        VS Code
                                     </Typography>
                                 </Grid>
                                 <Grid style={{ ...debugStyle, ...logoStyle }}>
