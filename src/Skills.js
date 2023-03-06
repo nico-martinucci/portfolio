@@ -1,4 +1,4 @@
-import { Typography, Stack } from "@mui/material";
+import { Typography } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2/Grid2";
 import Container from "@mui/material/Container";
 import { motion, AnimatePresence } from "framer-motion"
@@ -15,12 +15,9 @@ import { ReactComponent as NodeLogo } from "./icons/nodejs-icon.svg";
 import { ReactComponent as ExpressLogo } from "./icons/express.svg";
 import { ReactComponent as FlaskLogo } from "./icons/flask.svg";
 import { ReactComponent as PostgreSQLLogo } from "./icons/postgresql.svg";
-import { ReactComponent as ApolloLogo } from "./icons/apollostack.svg";
 import { ReactComponent as JQueryLogo } from "./icons/jquery.svg";
 import { ReactComponent as AxiosLogo } from "./icons/axios.svg";
 import { ReactComponent as JestLogo } from "./icons/jest.svg";
-import { ReactComponent as AWSS3Logo } from "./icons/aws-s3.svg";
-import { ReactComponent as VSCodeLogo } from "./icons/vscode.svg";
 import { ReactComponent as InsomniaLogo } from "./icons/insomnia.svg";
 import { ReactComponent as GitLogo } from "./icons/git.svg";
 import { ReactComponent as GitHubLogo } from "./icons/github.svg";

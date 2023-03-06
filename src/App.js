@@ -1,7 +1,6 @@
 import { CssBaseline, Container } from '@mui/material';
 import { BrowserRouter } from 'react-router-dom';
 import './App.css';
-import Footer from './Footer';
 import Nav from './Nav';
 import RoutesList from './RoutesList';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
