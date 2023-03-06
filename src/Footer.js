@@ -1,4 +1,4 @@
-import { Typography } from "@mui/material";
+import { Container, Typography } from "@mui/material";
 import { Stack } from "@mui/system";
 /**
  * Footer: 
@@ -6,7 +6,7 @@ import { Stack } from "@mui/system";
 function Footer() {
     const iconPxWidth = 40;
     return (
-        <>
+        <Container style={{ position: "absolute", left: 0, bottom: 0, right: 0 }}>
             <div style={{ display: "flex", justifyContent: "center" }}>
                 <Stack mt={5} mb={5} width="500px" direction={"row"} justifyContent="space-around">
                     <a href="https://github.com/nico-martinucci" target="_blank">
@@ -20,7 +20,7 @@ function Footer() {
                     </a>
                 </Stack>
             </div>
-        </>
+        </Container>
     )
 }
 

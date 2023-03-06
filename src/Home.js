@@ -1,7 +1,8 @@
 import { Stack, Typography, Button, ButtonGroup } from "@mui/material";
 import { Link } from "react-router-dom";
 import Matter, { MouseConstraint } from "matter-js";
-import { motion } from "framer-motion"
+import { motion, AnimatePresence } from "framer-motion"
+import animationSettings from "./pageAnimations";
 
 // module aliases
 var Engine = Matter.Engine,
@@ -109,42 +110,48 @@ function Home() {
     }
 
     return (
-        <motion.div initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}}>
-            <Stack direction="row">
-                <img width="300px" src="/nico_headshot_circle.png" onClick={addBody} />
-                <Stack ml={6}>
-                    <Stack gap={3}>
-                        <Typography variant="h3" gutterBottom>
-                            Hi, I'm Nico!
-                        </Typography>
-                        <Typography variant="h6">{bio}</Typography>
-                        <Stack direction="row" gap={4}>
-                            <Button
-                                component={Link}
-                                to="/projects"
-                                variant="outlined"
-                            >
-                                Projects
-                            </Button>
-                            <Button
-                                component={Link}
-                                to="/resume"
-                                variant="outlined"
-                            >
-                                Resume
-                            </Button>
-                            <Button
-                                component={Link}
-                                to="/contact"
-                                variant="outlined"
-                            >
-                                Contact
-                            </Button>
+        <AnimatePresence>
+            <motion.div
+                initial={animationSettings.initial}
+                animate={animationSettings.animate}
+                exit={animationSettings.exit}
+            >
+                <Stack direction="row">
+                    <img width="300px" src="/nico_headshot_circle.png" onClick={addBody} />
+                    <Stack ml={6}>
+                        <Stack gap={3}>
+                            <Typography variant="h3" gutterBottom>
+                                Hi, I'm Nico!
+                            </Typography>
+                            <Typography variant="h6">{bio}</Typography>
+                            <Stack direction="row" gap={4}>
+                                <Button
+                                    component={Link}
+                                    to="/projects"
+                                    variant="outlined"
+                                >
+                                    Projects
+                                </Button>
+                                <Button
+                                    component={Link}
+                                    to="/resume"
+                                    variant="outlined"
+                                >
+                                    Resume
+                                </Button>
+                                <Button
+                                    component={Link}
+                                    to="/contact"
+                                    variant="outlined"
+                                >
+                                    Contact
+                                </Button>
+                            </Stack>
                         </Stack>
                     </Stack>
                 </Stack>
-            </Stack>
-        </motion.div>
+            </motion.div>
+        </AnimatePresence>
     )
 }
 

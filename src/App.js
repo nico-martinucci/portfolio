@@ -21,7 +21,6 @@ function App() {
 					<Nav />
 					<RoutesList />
 				</BrowserRouter>
-				<Footer />
 			</Container>
 		</ThemeProvider>
 	);
