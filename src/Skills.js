@@ -132,12 +132,6 @@ function Skills() {
                                         PostgreSQL
                                     </Typography>
                                 </Grid>
-                                <Grid style={{ ...debugStyle, ...logoStyle }}>
-                                    <ApolloLogo width={logoWidth} height={logoHeight} />
-                                    <Typography variant="p" gutterBottom>
-                                        Apollo Client
-                                    </Typography>
-                                </Grid>
                             </Grid>
                         </Grid>
                         <Grid xs={2} style={debugStyle} display="flex" alignItems="center">
