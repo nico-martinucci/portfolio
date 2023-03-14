@@ -134,6 +134,13 @@ function Home() {
                                 </Button>
                                 <Button
                                     component={Link}
+                                    to="/skills"
+                                    variant="outlined"
+                                >
+                                    Skills
+                                </Button>
+                                <Button
+                                    component={Link}
                                     to="/resume"
                                     variant="outlined"
                                 >
