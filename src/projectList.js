@@ -17,7 +17,7 @@ const projectList = [
         description: 'VRBO-inspired "Backyards by owner" yard and pool booking application',
         image: "/bybo_thumb.jpg",
         tech: ["React", "Reactstrap", "Axios", "Flask", "SQLAlchemy", "Bcrypt", "AWS S3", "pyjwt"],
-        deployLink: "https://bybo-react-nm.surge.sh/",
+        deployLink: "https://bybo.nicomartinucci.com/",
         gitHubLinks: [
             {
                 title: "GitHub (React)",
