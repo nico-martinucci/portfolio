@@ -117,7 +117,7 @@ function Home() {
                 exit={animationSettings.exit}
             >
                 <Stack direction="row">
-                    <img width="300px" src="/nico_headshot_circle.png" onClick={addBody} />
+                    <img width="300px" src="/nico_headshot_circle_compressed.png" onClick={addBody} />
                     <Stack ml={6}>
                         <Stack gap={3}>
                             <Typography variant="h3" gutterBottom>
